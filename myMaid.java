@@ -68,7 +68,7 @@ public class myMaid extends TelegramLongPollingBot{
             String killCheck = msg + "   ";
 
             if (message.hasPhoto()){
-                //code
+                //code 
             } else if (killCheck.substring(0,4).equals("Kill")) {
                 MegaKillaSupaOvner megaKillaSupaOvner = new MegaKillaSupaOvner();
                 String process = msg.substring(5);
