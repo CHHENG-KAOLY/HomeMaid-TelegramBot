@@ -62,13 +62,14 @@ public class myMaid extends TelegramLongPollingBot{
         SendMessage sendMessage = new SendMessage();
         sendMessage.enableMarkdown(true);
 
-        if (message.getChatId() == chatID) {
+       if (message.getChatId() == chatID) {
             sendMessage.setChatId(Integer.toString(chatID));
             msg = message.getText();
+            String killCheck = msg + "   ";
 
             if (message.hasPhoto()){
                 //code
-            } else if (msg.length() >= 4) if (msg.substring(0,4).equals("Kill")) {
+            } else if (killCheck.substring(0,4).equals("Kill")) {
                 MegaKillaSupaOvner megaKillaSupaOvner = new MegaKillaSupaOvner();
                 String process = msg.substring(5);
                 System.out.println(process + " is killed.");
